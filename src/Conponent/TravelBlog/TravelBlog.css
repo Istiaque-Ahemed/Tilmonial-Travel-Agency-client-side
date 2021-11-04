@@ -1,0 +1,16 @@
+.blog-area{
+    padding-left: 160px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.img{
+    padding-left: 0px;
+}
+@media (max-width: 767.98px) {
+    .blog-area{
+        padding-top: 30px;
+        padding-left: 50px;
+        margin: 0;
+        padding-bottom: 60px;
+    }
+}

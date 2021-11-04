@@ -1,0 +1,31 @@
+.why-choos-area{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+}
+.single{
+    display: flex;
+    padding: 20px;
+}
+.single img{
+    padding-right:20px;
+    padding-left:20px;
+
+}
+.choose-header{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.choose-para {
+    text-align: center;
+}
+.About-para{
+    font-family: 'Roboto', sans-serif;
+
+}
+@media (max-width: 767.98px) {
+    .why-choos-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

@@ -1,0 +1,61 @@
+.contect{
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.form{
+    width: 500px;
+    margin: 50px;
+}
+.input-form{
+    padding: 20px;
+    border-radius: 30px;
+}
+.text-area{
+    border-radius: 30px;
+}
+.icon-font{
+    margin-left: 200px  ;
+    margin-top: 40px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 20px;
+    background-color: #00BCD8;
+}
+.img-div{
+    margin: 0;
+}
+.imgs{
+    width: 600px;
+}
+.contect-text{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+    .contect{
+        
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .imgs{
+        width: 290px;
+        margin-left: 20px;
+    }
+    .input-form{
+        width: 290px;
+        padding: 20px;
+    }
+    .text-area{
+        width: 290px;
+        padding: 29px;
+    }
+    .icon-font{
+        margin-left: 47px;
+    }
+}

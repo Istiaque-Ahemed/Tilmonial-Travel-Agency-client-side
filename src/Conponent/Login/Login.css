@@ -1,0 +1,95 @@
+.login-from{
+    margin-left: 450px;
+    border:2px solid #d0d0d0;
+    margin-right: 400px;
+    padding: 60px 27px 60px 0px;
+    font-family: 'Varela Round', sans-serif;  
+
+
+}
+.login-from h2{
+    margin-left: 111px;
+    color: #00BCD8;
+    padding-bottom: 10px;
+}
+
+.email-input{
+    padding: 15px;
+    width:300px;
+    background-color: rgb(197, 195, 195);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-left: 63px;
+
+}
+.password-input{
+    padding: 15px;
+    width:300px;
+    background-color: rgb(197, 195, 195);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-left: 63px;
+
+}
+.password-area{
+    margin-top: 20px;
+}
+.label{
+    margin-right: 33px;
+}
+.label1{
+    margin-right: 5px;
+}
+.login-btn{
+    width: 250px;
+    margin-left:92px ;
+    margin-top: 20px;
+    background-color: rgb(33 188 216);
+    color: white;
+    border: none;
+}
+.check-and-resat{
+    display: flex;
+    align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .login-from{
+        margin-left: 0px;
+        border: none;
+        padding: 0px;
+    }
+    .email-input{
+        width:270px ;
+    }
+    .password-input{
+        width: 270px;
+    }
+    .login-btn{
+        width: 180px;
+        margin-left: 110px;
+    }
+    .login-from h2{
+        font-size: 20px;
+        padding-left: 60px;
+    }
+    .check-and-resat{
+        display: flex;
+        align-content: stretch;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+    }
+    .check-box{
+        margin-left: 340px;
+    }
+    
+
+}
