@@ -1,21 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
-
+import { useForm } from "react-hook-form";
 import { useParams } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth'
+import axios from "axios";
+
+
+
+import './ServiceDetails.css'
+
+
 
 const ServiceDetail = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({})
     const { name, description, img, price } = service;
 
+
+
     useEffect(() => {
         const url = `http://localhost:5000/services/${serviceId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
-    }, [])
+    }, []);
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        axios
+            .post("http://localhost:5000/orders", data)
+            .then((res) => {
+                if (res.data.insertedId) {
+                    alert("Package booked successfully");
+                    reset();
+                }
+            })
+    }
+    const { user } = useAuth()
+
     return (
-        <div>
+        <div className="details-service">
             <div className="card-bod col-lg-4 col-md-3 col-12">
                 <Card className="card shadow">
                     <div className="inner">
@@ -30,6 +54,27 @@ const ServiceDetail = () => {
                     </Card.Body>
 
                 </Card>
+
+            </div>
+            <div>
+
+                <h3 className="form-title">
+                    Please fill the form to book your package
+                </h3>
+
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <input className="input" value={user.displayName} placeholder="Name" {...register("Name")} />
+                    <input className="input" placeholder=" Address" {...register("Address")} />
+                    <input className="input" value={user.email} placeholder="Email" {...register("email")} />
+                    <input className="input" placeholder="Phone" {...register("phone")} />
+                    <input className="input" value={serviceId} placeholder="" {...register("serviceId")} />
+
+
+
+
+
+                    <input className="input-btn" type="submit" />
+                </form>
 
             </div>
 

@@ -7,3 +7,26 @@
 .add-services form input,textarea{
     width: 40%;
 }
+.input-area{
+    color: black;
+    border:none ;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #ddd9d9;
+    text-align: center;
+}
+.add-text{
+    font-family: 'Roboto', sans-serif;
+    color: red;
+
+}
+
+.submit-btn{
+    margin-bottom: 100px;
+}
+
+@media (max-width: 767.98px){
+    .add-services form input ,textarea{
+        width: 50%;
+    }
+}

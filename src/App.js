@@ -14,6 +14,9 @@ import Contact from './Conponent/Contact/Contact'
 import ServiceDetail from './Conponent/ServiceDetail/ServiceDetail';
 import AddService from './Conponent/AddService/AddService';
 import PrivateRoute from './Conponent/PrivateRout/PrivateRoute';
+import ManageService from './Conponent/ManageService/ManageService';
+import Order from './Conponent/Order/Order';
+import MyOrder from './Conponent/MyOrder/MyOrder';
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Header></Header>
+
+
           <Switch>
             <Route exact path="/">
               <Banner></Banner>
@@ -45,11 +50,13 @@ function App() {
               <Services></Services>
               <Footer></Footer>
             </Route>
-            {/* <Route path="/service/:serviceId">
+            <Route path="/service/:serviceId">
               <ServiceDetail></ServiceDetail>
-            </Route> */}
+            </Route>
             <PrivateRoute path="/service/:serviceId">
               <ServiceDetail></ServiceDetail>
+              <Footer></Footer>
+
 
             </PrivateRoute>
 
@@ -61,10 +68,22 @@ function App() {
             </Route>
             <Route path="/addservice">
               <AddService></AddService>
+              <Footer></Footer>
+
             </Route>
+            <Route path="/myorder">
+              <Order></Order>
+              <Footer></Footer>
+
+            </Route>
+            <Route path="/managess">
+              <ManageService></ManageService>
+            </Route>
+
             <Route path="/register">
               <Register></Register>
             </Route>
+
           </Switch>
         </BrowserRouter>
       </AuthProvider>
