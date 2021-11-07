@@ -14,9 +14,8 @@ import Contact from './Conponent/Contact/Contact'
 import ServiceDetail from './Conponent/ServiceDetail/ServiceDetail';
 import AddService from './Conponent/AddService/AddService';
 import PrivateRoute from './Conponent/PrivateRout/PrivateRoute';
-import ManageService from './Conponent/ManageService/ManageService';
 import Order from './Conponent/Order/Order';
-import MyOrder from './Conponent/MyOrder/MyOrder';
+import ManageOrder from './Conponent/ManageOrder/ManageOrder';
 
 function App() {
   return (
@@ -50,16 +49,10 @@ function App() {
               <Services></Services>
               <Footer></Footer>
             </Route>
-            <Route path="/service/:serviceId">
-              <ServiceDetail></ServiceDetail>
-            </Route>
             <PrivateRoute path="/service/:serviceId">
               <ServiceDetail></ServiceDetail>
               <Footer></Footer>
-
-
             </PrivateRoute>
-
             <Route path="/contact">
               <Contact></Contact>
             </Route>
@@ -69,17 +62,14 @@ function App() {
             <Route path="/addservice">
               <AddService></AddService>
               <Footer></Footer>
-
             </Route>
             <Route path="/myorder">
               <Order></Order>
               <Footer></Footer>
-
             </Route>
-            <Route path="/managess">
-              <ManageService></ManageService>
-            </Route>
-
+            <PrivateRoute path="/manageorders">
+              <ManageOrder></ManageOrder>
+            </PrivateRoute>
             <Route path="/register">
               <Register></Register>
             </Route>

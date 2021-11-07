@@ -9,6 +9,8 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const auth = getAuth()
+    const [isLoading, setIsLoading] = useState(true);
+
     const googleProvider = new GoogleAuthProvider();
 
     const signInUsinGoogle = () => {
@@ -20,20 +22,24 @@ const useFirebase = () => {
             .then(() => {
                 setUser({})
             })
+            .finally(() => setIsLoading(false));
     }
     useEffect(() => {
         onAuthStateChanged(auth, user => {
             if (user) {
-                console.log('inside state change', user);
-                setUser(user)
+                setUser(user);
+            } else {
+                setUser({});
             }
-        })
-    }, [])
+            setIsLoading(false);
+        });
+    }, [auth]);
     return {
         user,
         error,
         logout,
-        signInUsinGoogle
+        signInUsinGoogle,
+        isLoading,
 
 
     }

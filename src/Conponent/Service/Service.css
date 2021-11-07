@@ -9,6 +9,8 @@
 }
 .card-bod{
     padding:10px;
+    font-family: 'Roboto', sans-serif;
+
     /* padding-right: 10px; */
 }
 .card img{

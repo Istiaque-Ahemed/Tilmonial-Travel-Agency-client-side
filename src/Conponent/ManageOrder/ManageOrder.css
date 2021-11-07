@@ -1,0 +1,13 @@
+.manage-order{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+}
+.manage-order{
+     text-align: center;
+}
+@media (max-width: 767.98px) {
+     .manage-order{
+          display:grid;
+          grid-template-columns: repeat(1,1fr);
+     }
+}

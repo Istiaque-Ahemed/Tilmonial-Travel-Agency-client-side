@@ -11,7 +11,7 @@ const WhyChoose = () => {
     return (
         <>
             <h1 className="choose-header">Why Choose Tilmonial?</h1>
-            <p className="choose-para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, doloribus voluptatum, delectus odio est</p>
+            <p className="choose-para">A complete search of the internet has found these results: Enjoy your trip is the most popular phrase on the web. </p>
             <div className="why-choos-area">
                 <div className="single">
                     <img src={money} height="100px" alt="" />

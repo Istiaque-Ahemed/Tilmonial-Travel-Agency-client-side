@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth'
 import axios from "axios";
+import './ServiceDetail.css';
 
 
 
@@ -67,7 +68,7 @@ const ServiceDetail = () => {
                     <input className="input" placeholder=" Address" {...register("Address")} />
                     <input className="input" value={user.email} placeholder="Email" {...register("email")} />
                     <input className="input" placeholder="Phone" {...register("phone")} />
-                    <input className="input" value={serviceId} placeholder="" {...register("serviceId")} />
+                    <input className="input-detile" value={serviceId} placeholder="" {...register("serviceId")} />
 
 
 
