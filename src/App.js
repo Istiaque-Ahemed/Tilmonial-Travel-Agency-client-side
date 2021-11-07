@@ -8,7 +8,7 @@ import TravelBlog from './Conponent/TravelBlog/TravelBlog';
 import Services from './Conponent/Services/Services';
 import Login from './Conponent/Login/Login';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Register from './Conponent/Register/Register';
+import NotFound from './Conponent/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
 import Contact from './Conponent/Contact/Contact'
 import ServiceDetail from './Conponent/ServiceDetail/ServiceDetail';
@@ -37,7 +37,7 @@ function App() {
               <Services></Services>
               <Footer></Footer>
             </Route>
-            <Route path="/home">
+            <Route exact path="/home">
               <Banner></Banner>
               <TravelBlog></TravelBlog>
               <WhyChoose></WhyChoose>
@@ -55,25 +55,28 @@ function App() {
             </PrivateRoute>
             <Route path="/contact">
               <Contact></Contact>
+              <Footer></Footer>
             </Route>
             <Route path="/login">
               <Login></Login>
+              <Footer></Footer>
             </Route>
-            <Route path="/addservice">
+            <PrivateRoute path="/addservice">
               <AddService></AddService>
               <Footer></Footer>
-            </Route>
-            <Route path="/myorder">
+            </PrivateRoute>
+            <PrivateRoute path="/myorder">
               <Order></Order>
               <Footer></Footer>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/manageorders">
               <ManageOrder></ManageOrder>
+              <Footer></Footer>
             </PrivateRoute>
-            <Route path="/register">
-              <Register></Register>
+            <Route exact path="*">
+              <NotFound></NotFound>
+              <Footer></Footer>
             </Route>
-
           </Switch>
         </BrowserRouter>
       </AuthProvider>

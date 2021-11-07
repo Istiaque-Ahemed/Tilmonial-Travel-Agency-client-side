@@ -8,7 +8,7 @@ const ManageSingleOrder = ({ manageservice }) => {
     const [orderd, setOrderd] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://serene-reef-76018.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setOrderd(data))
     }, [])
@@ -16,7 +16,7 @@ const ManageSingleOrder = ({ manageservice }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure,you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://serene-reef-76018.herokuapp.com/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {

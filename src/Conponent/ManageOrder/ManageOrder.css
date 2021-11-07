@@ -2,8 +2,12 @@
      display: grid;
      grid-template-columns: repeat(3,1fr);
 }
-.manage-order{
+.manage-title{
      text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
 }
 @media (max-width: 767.98px) {
      .manage-order{

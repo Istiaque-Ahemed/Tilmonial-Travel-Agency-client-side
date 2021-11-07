@@ -20,7 +20,7 @@ const ServiceDetail = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${serviceId}`;
+        const url = `https://serene-reef-76018.herokuapp.com/services/${serviceId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
@@ -29,7 +29,7 @@ const ServiceDetail = () => {
     const onSubmit = data => {
         console.log(data);
         axios
-            .post("http://localhost:5000/orders", data)
+            .post("https://serene-reef-76018.herokuapp.com/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Package booked successfully");
