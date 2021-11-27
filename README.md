@@ -6,7 +6,8 @@
 * You can read travel blog.
 * You can booking different travel package.
 * Manage booking.
-* This website is secure.
+* Customer can easily be booking their packages on this website.
+* The website has a Firebase login system.
 
 
 

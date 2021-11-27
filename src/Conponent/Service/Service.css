@@ -39,6 +39,7 @@
 @media only screen and (max-width: 767px) {
     .card{
         width: 350px;
+        margin-left:20px;
 
     
     }
@@ -69,6 +70,7 @@
 
     .card{
         width: 325px;
+        margin-left: 20px;
     }
     .card img{
         width:325px;

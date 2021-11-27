@@ -34,9 +34,9 @@ const TravelBlog = () => {
                         <Card className="me-5" style={{ width: '18rem' }}>
                             <Card.Img className="img" src={news3} />
                             <Card.Body>
-                                <Card.Title>Las Vegas</Card.Title>
+                                <Card.Title>Eiffel Tower</Card.Title>
                                 <Card.Text>
-                                    Las Vegas, often known simply as Vegas, is the 26th-most populous city in the United States, the most populous city in the state of Nevada, and the county seat of Clark County.
+                                    The Eiffel Tower—or as the French call it, La Tour Eiffel—is one of the world's most recognizable landmarks. The tower was designed as the centerpiece of the 1889 World's Fair in Paris
                                 </Card.Text>
                             </Card.Body>
                         </Card>

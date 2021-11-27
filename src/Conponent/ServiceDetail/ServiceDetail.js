@@ -5,9 +5,6 @@ import { useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth'
 import axios from "axios";
 import './ServiceDetail.css';
-
-
-
 import './ServiceDetails.css'
 
 
@@ -16,8 +13,6 @@ const ServiceDetail = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({})
     const { name, description, img, price } = service;
-
-
 
     useEffect(() => {
         const url = `https://serene-reef-76018.herokuapp.com/services/${serviceId}`;
@@ -74,7 +69,7 @@ const ServiceDetail = () => {
 
 
 
-                    <input className="input-btn" type="submit" />
+                    <input className="input-btn" type="submit" value="Order" />
                 </form>
 
             </div>
